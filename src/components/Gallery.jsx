@@ -3,7 +3,7 @@ import GetDogs from "./GetDogs";
 import GetCats from "./GetCats";
 import GetBirds from "./GetBirds";
 import SearchBar from "./SearchBar";
-import { FaCat, FaDog, FaDove } from "react-icons/fa6";
+import { FaCat, FaDog, FaDove } from "react-icons/fa";
 
 const Gallery = ({ showList, setShowList }) => {
   const [wordEntered, setWordEntered] = useState("");

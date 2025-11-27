@@ -7,7 +7,7 @@ import FindUs from "./components/FindUs";
 import Footer from "./components/Footer";
 import "./App.css";
 
-function App() {
+const App = () => {
   const [showList, setShowList] = useState(null);
   return (
     <>

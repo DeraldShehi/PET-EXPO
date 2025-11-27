@@ -1,7 +1,7 @@
-import { FaBars, FaCat, FaDeleteLeft, FaDog, FaDove } from "react-icons/fa6";
+import { FaBars, FaCat, FaDeleteLeft, FaDog, FaDove } from "react-icons/fa";
 
 const Header = ({ setShowList }) => {
-  const OpenDogsList = () => {
+  const OpenDogsList = () => {``
     setShowList("dogs");
   };
   const OpenCatsList = () => {
