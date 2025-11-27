@@ -1,4 +1,4 @@
-import { FaBars, FaCat, FaDeleteLeft, FaDog, FaDove } from "react-icons/fa";
+import { FaBars, FaCat, FaBackspace, FaDog, FaDove } from "react-icons/fa";
 
 const Header = ({ setShowList }) => {
   const OpenDogsList = () => {``
@@ -39,7 +39,7 @@ const Header = ({ setShowList }) => {
           <FaDove className="bird" /> Birds
         </button>
         <button className="close-navbar-btn" onClick={CloseNavBar}>
-          <FaDeleteLeft />
+          <FaBackspace />
         </button>
       </nav>
       <nav className="menu">
