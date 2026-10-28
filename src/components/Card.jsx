@@ -36,6 +36,7 @@ const Card = ({
       {showPopUp && (
         <PopUp
           name={name}
+          image={image}
           species={species}
           family={family}
           habitat={habitat}

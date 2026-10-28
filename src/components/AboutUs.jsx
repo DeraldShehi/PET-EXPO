@@ -1,3 +1,5 @@
+import animals from "../assets/animals.png";
+
 const AboutUs = () => {
   return (
     <section className="about-us">
@@ -11,7 +13,7 @@ const AboutUs = () => {
         </p>
       </div>
       <div className="about-us-img">
-        <img src="src/assets/footprint.png" alt="animal" />
+        <img src={animals} alt="Pet Expo animals" />
       </div>
     </section>
   );
