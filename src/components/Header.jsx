@@ -1,7 +1,8 @@
+import logo from "../assets/animals.png";
 import { FaBars, FaCat, FaBackspace, FaDog, FaDove } from "react-icons/fa";
 
 const Header = ({ setShowList }) => {
-  const OpenDogsList = () => {``
+  const OpenDogsList = () => {
     setShowList("dogs");
   };
   const OpenCatsList = () => {
@@ -22,7 +23,7 @@ const Header = ({ setShowList }) => {
   return (
     <header>
       <span className="logo">
-        <img src="src/assets/animals.png" alt="animal" />
+        <img src={logo} alt="animal" />
         PET EXPO
       </span>
       <button className="navbar-menu-btn" onClick={OpenNavBar}>

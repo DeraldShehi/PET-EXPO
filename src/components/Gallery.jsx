@@ -1,7 +1,5 @@
 import { useState } from "react";
-import GetDogs from "./GetDogs";
-import GetCats from "./GetCats";
-import GetBirds from "./GetBirds";
+import GetAnimals from "./GetAnimals";
 import SearchBar from "./SearchBar";
 import { FaCat, FaDog, FaDove } from "react-icons/fa";
 
@@ -20,7 +18,7 @@ const Gallery = ({ showList, setShowList }) => {
   return (
     <div className="gallery">
       <h1>GALLERY</h1>
-      <SearchBar wordsEntered={wordEntered} setWordEntered={setWordEntered} />
+      <SearchBar wordEntered={wordEntered} setWordEntered={setWordEntered} />
       <div className="card-container">
         <div className="menu-gallery">
           <button className="cats-list-btn" onClick={OpenCatsList}>
@@ -36,9 +34,13 @@ const Gallery = ({ showList, setShowList }) => {
             Open Birds List
           </button>
         </div>
-        {showList === "dogs" && <GetDogs wordsEntered={wordEntered} />}
-        {showList === "cats" && <GetCats wordsEntered={wordEntered} />}
-        {showList === "birds" && <GetBirds wordsEntered={wordEntered} />}
+        {showList && (
+          <GetAnimals
+            key={showList}
+            type={showList}
+            wordsEntered={wordEntered}
+          />
+        )}
       </div>
     </div>
   );
