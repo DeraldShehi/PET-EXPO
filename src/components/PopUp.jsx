@@ -1,3 +1,6 @@
+const formatValue = (value) =>
+  Array.isArray(value) ? value.join(", ") : value;
+
 const PopUp = ({
   name,
   breed_group,
@@ -15,23 +18,35 @@ const PopUp = ({
   weight_kg,
   closePopUP,
 }) => {
+  const details = [
+    ["Species", species],
+    ["Family", family],
+    ["Habitat", habitat],
+    ["Place found", place_of_found],
+    ["Wingspan (cm)", wingspan_cm],
+    ["Weight (kg)", weight_kg],
+    ["Breed group", breed_group],
+    ["Size", size],
+    ["Lifespan", lifespan],
+    ["Origin", origin],
+    ["Temperament", temperament],
+    ["Colors", colors],
+    ["Description", description],
+  ];
+
   return (
     <div className="popUp">
       <div className="popUp-container">
-        <p>Name :{name}</p>
-        {species && <p>Species :{species}</p>}
-        {family && <p>Family :{family}</p>}
-        {habitat && <p>Habitat :{habitat}</p>}
-        {place_of_found && <p>Place_of_found :{place_of_found}</p>}
-        {wingspan_cm && <p>Wingspan_cm :{wingspan_cm}</p>}
-        {weight_kg && <p>Weight_kg :{weight_kg}</p>}
-        {breed_group && <p>Breed_group :{breed_group}</p>}
-        {size && <p>Size :{size}</p>}
-        {lifespan && <p>Lifespan :{lifespan}</p>}
-        {origin && <p>Origin :{origin}</p>}
-        {temperament && <p>Temperament :{temperament}</p>}
-        {colors && <p>Colors :{colors}</p>}
-        {description && <p>Description :{description}</p>}
+        <p>Name: {name}</p>
+        {details.map(
+          ([label, value]) =>
+            value != null &&
+            value !== "" && (
+              <p key={label}>
+                {label}: {formatValue(value)}
+              </p>
+            )
+        )}
         <button className="close-popUp-btn" onClick={closePopUP}>
           Close
         </button>
@@ -39,4 +54,5 @@ const PopUp = ({
     </div>
   );
 };
+
 export default PopUp;

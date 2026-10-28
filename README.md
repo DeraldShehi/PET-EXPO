@@ -1,8 +1,58 @@
-# React + Vite
+# PET EXPO 🐶🐱🐦
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A single-page website for a pet exhibition, built with **React** and **Vite**.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Gallery** of dogs, cats and birds loaded from [FreeTestAPI](https://freetestapi.com)
+- **Search** by animal name
+- **Detail pop-up**: click any card to see breed, origin, lifespan, temperament and more
+- Responsive header with a mobile menu
+- About Us, Contact Us and Find Us sections
+
+## Tech stack
+
+- React 18
+- Vite 5
+- react-icons
+- ESLint
+
+## Getting started
+
+```bash
+npm install
+npm run dev
+```
+
+Then open the URL Vite prints (usually http://localhost:5173).
+
+### Other scripts
+
+| Command           | Description                      |
+| ----------------- | -------------------------------- |
+| `npm run build`   | Build for production in `dist/`  |
+| `npm run preview` | Preview the production build     |
+| `npm run lint`    | Run ESLint                       |
+
+## Project structure
+
+```
+src/
+├── App.jsx              # Page layout
+├── components/
+│   ├── Header.jsx       # Logo + navigation
+│   ├── Gallery.jsx      # Category buttons, search, list
+│   ├── GetAnimals.jsx   # Fetches and filters dogs / cats / birds
+│   ├── Card.jsx         # Animal card
+│   ├── PopUp.jsx        # Animal details
+│   ├── SearchBar.jsx
+│   ├── AboutUs.jsx
+│   ├── ContactUs.jsx
+│   ├── FindUs.jsx
+│   └── Footer.jsx
+└── assets/
+```
+
+## Author
+
+**Derald Shehi** – [LinkedIn](https://www.linkedin.com/in/deraldshehi94/)

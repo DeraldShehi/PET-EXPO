@@ -2,7 +2,6 @@ import { useState } from "react";
 import PopUp from "./PopUp";
 
 const Card = ({
-  id,
   name,
   image,
   breed_group,
@@ -25,15 +24,14 @@ const Card = ({
     <>
       <div
         className="card"
-        key={id}
         onClick={() => {
           setShowPopUp(true);
         }}
       >
-        <img src={image} alt="images" />
-        <h4>Name:{name}</h4>
-        {origin && <p>Origin:{origin}</p>}
-        {place_of_found && <p>Place_of_found:{place_of_found}</p>}
+        <img src={image} alt={name} />
+        <h4>{name}</h4>
+        {origin && <p>Origin: {origin}</p>}
+        {place_of_found && <p>Place found: {place_of_found}</p>}
       </div>
       {showPopUp && (
         <PopUp
