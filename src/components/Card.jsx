@@ -28,7 +28,7 @@ const Card = ({
           setShowPopUp(true);
         }}
       >
-        <img src={image} alt={name} />
+        <img src={image} alt={name} loading="lazy" />
         <h4>{name}</h4>
         {origin && <p>Origin: {origin}</p>}
         {place_of_found && <p>Place found: {place_of_found}</p>}

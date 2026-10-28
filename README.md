@@ -4,7 +4,7 @@ A single-page website for a pet exhibition, built with **React** and **Vite**.
 
 ## Features
 
-- **Gallery** of dogs, cats and birds loaded from [FreeTestAPI](https://freetestapi.com)
+- **Gallery** of dogs ([TheDogAPI](https://thedogapi.com)), cats ([TheCatAPI](https://thecatapi.com)) and birds ([iNaturalist](https://www.inaturalist.org)) — all free, no API key needed
 - **Search** by animal name
 - **Detail pop-up**: click any card to see breed, origin, lifespan, temperament and more
 - Responsive header with a mobile menu
@@ -39,10 +39,11 @@ Then open the URL Vite prints (usually http://localhost:5173).
 ```
 src/
 ├── App.jsx              # Page layout
+├── api/animals.js       # API URLs + mapping to a common shape
 ├── components/
 │   ├── Header.jsx       # Logo + navigation
 │   ├── Gallery.jsx      # Category buttons, search, list
-│   ├── GetAnimals.jsx   # Fetches and filters dogs / cats / birds
+│   ├── GetAnimals.jsx   # Loads and filters dogs / cats / birds
 │   ├── Card.jsx         # Animal card
 │   ├── PopUp.jsx        # Animal details
 │   ├── SearchBar.jsx
