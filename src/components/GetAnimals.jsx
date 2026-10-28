@@ -1,7 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import Card from "./Card";
-
-const API_URL = "https://freetestapi.com/api/v1";
+import { fetchAnimals } from "../api/animals";
 
 // type: "dogs" | "cats" | "birds"
 const GetAnimals = ({ type, wordsEntered = "" }) => {
@@ -16,13 +15,7 @@ const GetAnimals = ({ type, wordsEntered = "" }) => {
       setLoading(true);
       setError(null);
       try {
-        const response = await fetch(`${API_URL}/${type}`, {
-          signal: controller.signal,
-        });
-        if (!response.ok) {
-          throw new Error(`Request failed with status ${response.status}`);
-        }
-        setData(await response.json());
+        setData(await fetchAnimals(type, controller.signal));
       } catch (err) {
         if (err.name !== "AbortError") setError(err);
       } finally {
